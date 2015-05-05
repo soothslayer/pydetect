@@ -1,9 +1,13 @@
 import os
 import time
 import sys
+from pushover import init, Client
+
+init("<token>")
+client = Client("<user-key>").send_message("Hello!", title="Hello")
 
 os.system('clear')
-deviceIP = raw_input("Enter the IP address to listen for: ")
+deviceIP = 10.0.0.201 #raw_input("Enter the IP address to listen for: ")
 cacheFolder = "cache/"
 cacheFileName = time.time()
 filePath = cacheFolder + str(cacheFileName)
